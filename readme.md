@@ -1,6 +1,6 @@
 # Application Frais
 
-## Requis
+## Pré-requis
 
 - PHP >= 7.2
 - Composer >= 1.6.4
@@ -14,5 +14,5 @@
 - `composer install`
 - Clone `.env.example`, rename it `.env` and edit it with your onw config.
 - `php artisan key:generate`
-- `php artisan migrate`
+- `php artisan migrate --seed`
 - `npm install`
