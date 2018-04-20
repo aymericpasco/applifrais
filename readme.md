@@ -12,7 +12,7 @@
 - `git clone git@github.com:aymericpasco/applifrais.git`
 - `cd applifrais`
 - `composer install`
-- Clone `.env.example`, rename it `.env` and edit it with your onw config.
+- Cloner `.env.example`, renommer`.env` et l'éditer.
 - `php artisan key:generate`
 - `php artisan migrate --seed`
 - `npm install`
