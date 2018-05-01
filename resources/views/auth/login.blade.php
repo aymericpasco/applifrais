@@ -11,8 +11,8 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
-                <label for="email">{{ __('Addresse E-Mail') }}</label>
-                <input type="email" class="form-control" id="email" name="email" required autofocus>
+                <label for="email">{{ __('Addresse E-Mail / Nom d\'utilisateur') }}</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail / Username" value="{{ old('email') }}" required autofocus>
                 @if ($errors->has('email'))
                     <small id="emailHelp" class="form-text text-muted">{{ $errors->first('email') }}</small>
                 @endif

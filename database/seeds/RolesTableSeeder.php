@@ -12,20 +12,14 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-
-        $visiteur = 'Visiteur';
-        $comptable = 'Comptable';
-
         DB::table('roles')->insert([
-            'display_name' => $visiteur,
-            'name' => str_slug($visiteur, "-"),
-            // 'created_at' => Carbon::now(),
+            'display_name' => "Visiteur",
+            'name' => str_slug("Visiteur", "-"),
         ]);
 
         DB::table('roles')->insert([
-            'display_name' => $comptable,
-            'name' => str_slug($comptable, "-"),
-            // 'created_at' => Carbon::now(),
+            'display_name' => "Comptable",
+            'name' => str_slug("Comptable", "-"),
         ]);
     }
 }

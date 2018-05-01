@@ -13,10 +13,11 @@ class AccountantsTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'firstname' => 'Aymeric',
-            'lastname' => 'Pasco',
-            'email' => 'apasco@local.dev',
-            'password' => bcrypt('comptable59'),
+            'firstname' => 'John',
+            'lastname' => 'Snow',
+            'username' => 'jsnow',
+            'email' => 'jsnow@winterfell.com',
+            'password' => bcrypt('AzertY!59000'),
             'created_at' => Carbon::now(),
             'role_id' => 2, // role id = 2 est comptable
         ]);

@@ -35,6 +35,14 @@ class User extends Authenticatable
         return $this->hasMany(ExpenseSheet::class);
     }
 
+    public function visits() {
+        return $this->hasMany(Visit::class, 'user_id', 'id');
+    }
+
+    public function doctors() {
+        return $this->hasMany(Doctor::class, 'user_id', 'id');
+    }
+
     public function hasRole($roleName) {
         if ($this->role->name === $roleName) {
             return true;

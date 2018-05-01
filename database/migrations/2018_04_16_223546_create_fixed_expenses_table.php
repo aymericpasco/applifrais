@@ -18,7 +18,6 @@ class CreateFixedExpensesTable extends Migration
             $table->string('name')->unique();
             $table->string('display_name');
             $table->decimal('amount', 10, 2);
-            // $table->timestamps();
         });
     }
 

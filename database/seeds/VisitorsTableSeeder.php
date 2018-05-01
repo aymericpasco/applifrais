@@ -15,41 +15,30 @@ class VisitorsTableSeeder extends Seeder
     {
 
         DB::table('users')->insert([
-            'firstname' => 'Louis',
-            'lastname' => 'Villechalane',
-            'email' => 'lvillechalane@local.dev',
-            'password' => bcrypt('jux7g'),
-            'address' => '8 rue des Charmes',
-            'zip' => '46000',
-            'city' => 'Cahors',
-            'hiring_date' => Carbon::createFromDate(2005, 12, 21),
+            'firstname' => 'Aymeric',
+            'lastname' => 'Pasco',
+            'username' => 'apasco',
+            'email' => 'apasco@gmail.com',
+            'password' => bcrypt('AzertY!59000'),
+            'address' => '202B rue du Buisson',
+            'zip' => '59700',
+            'city' => 'Marcq-en-Baroeul',
+            'hiring_date' => Carbon::createFromDate(2016, 9, 3),
             'created_at' => Carbon::now(),
             'role_id' => 1, // role id = 1 est visiteur
         ]);
 
 
         DB::table('users')->insert([
-            'firstname' => 'David',
-            'lastname' => 'Andre',
-            'email' => 'dandre@local.dev',
-            'password' => bcrypt('oppg5'),
-            'address' => '1 rue Petit',
-            'zip' => '46200',
-            'city' => 'Lalbenque',
-            'hiring_date' => Carbon::createFromDate(1998, 11, 23),
-            'created_at' => Carbon::now(),
-            'role_id' => 1, // role id = 1 est visiteur
-        ]);
-
-        DB::table('users')->insert([
-            'firstname' => 'Christian',
-            'lastname' => 'Bedos',
-            'email' => 'cbodes@local.dev',
-            'password' => bcrypt('gmhxd'),
-            'address' => '1 rue Peranud',
-            'zip' => '46250',
-            'city' => 'Montcuq',
-            'hiring_date' => Carbon::createFromDate(1995, 01, 12),
+            'firstname' => 'Julien',
+            'lastname' => 'Dupond',
+            'username' => 'jdupond',
+            'email' => 'jdupond@gmail.com',
+            'password' => bcrypt('AzertY!59000'),
+            'address' => '19 boulevard Papin',
+            'zip' => '59000',
+            'city' => 'Lille',
+            'hiring_date' => Carbon::createFromDate(2011, 1, 8),
             'created_at' => Carbon::now(),
             'role_id' => 1, // role id = 1 est visiteur
         ]);

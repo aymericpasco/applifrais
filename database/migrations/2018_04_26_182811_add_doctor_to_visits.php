@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolesTable extends Migration
+class AddDoctorToVisits extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('display_name');
-
-            $table->index('name');
+        Schema::table('visits', function (Blueprint $table) {
+            $table->unsignedInteger('doctor_id');
+            $table->foreign('doctor_id')->references('id')->on('doctors');
         });
     }
 
@@ -29,6 +26,8 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::table('visits', function (Blueprint $table) {
+            $table->dropForeign('visits_doctor_id_foreign');
+        });
     }
 }
