@@ -16,7 +16,7 @@ class LoginController extends Controller
     private $client;
 
     public function __construct() {
-        $this->client = Client::find(1);
+        $this->client = Client::find(3);
     }
 
     public function login(Request $request) {
