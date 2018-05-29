@@ -11,6 +11,8 @@ class FixedExpensesTableSeeder extends Seeder
      */
     public function run()
     {
+        // fixed exp 1 = Etape, 2 = Km, 3 = Hotel, 4 = Resto
+
         DB::table('fixed_expenses')->insert([
             'name' => 'ETP',
             'display_name' => 'Forfait Etape',

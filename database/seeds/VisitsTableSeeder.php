@@ -12,6 +12,10 @@ class VisitsTableSeeder extends Seeder
      */
     public function run()
     {
+        // visitor 1 -> doctors : 1, 2, 5
+        // visitor 2 -> doctors : 3, 4
+
+
         DB::table('visits')->insert([
             'visit_date' => Carbon::createFromDate(2018, 4, 12),
             'appointment' => true,
@@ -26,7 +30,7 @@ class VisitsTableSeeder extends Seeder
         ]);
 
         DB::table('visits')->insert([
-            'visit_date' => Carbon::createFromDate(2018, 1, 22),
+            'visit_date' => Carbon::createFromDate(2018, 5, 22),
             'appointment' => false,
             'arriving_time' =>
                 Carbon::create(0, 0, 0, 9, 7, 0)->toTimeString(),
@@ -34,12 +38,12 @@ class VisitsTableSeeder extends Seeder
                 Carbon::create(0, 0, 0, 9, 28, 0)->toTimeString(),
             'departure_time' =>
                 Carbon::create(0, 0, 0, 10, 53, 0)->toTimeString(),
-            'user_id' => 2, // julien dupond
-            'doctor_id' => 5 // patrick rimetz
+            'user_id' => 1,
+            'doctor_id' => 5
         ]);
 
         DB::table('visits')->insert([
-            'visit_date' => Carbon::createFromDate(2018, 3, 4),
+            'visit_date' => Carbon::createFromDate(2018, 5, 4),
             'appointment' => true,
             'arriving_time' =>
                 Carbon::create(0, 0, 0, 16, 1, 0)->toTimeString(),
@@ -47,8 +51,8 @@ class VisitsTableSeeder extends Seeder
                 Carbon::create(0, 0, 0, 16, 9, 0)->toTimeString(),
             'departure_time' =>
                 Carbon::create(0, 0, 0, 17, 22, 0)->toTimeString(),
-            'user_id' => 2, // julien dupond
-            'doctor_id' => 6 // corinne auslender
+            'user_id' => 2,
+            'doctor_id' => 4
         ]);
 
 

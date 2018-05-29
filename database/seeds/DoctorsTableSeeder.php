@@ -11,10 +11,16 @@ class DoctorsTableSeeder extends Seeder
      */
     public function run()
     {
+
+        // visitor 1 -> doctors : 1, 2, 5
+        // visitor 2 -> doctors : 3, 4
+
+
         DB::table('doctors')->insert([
             'firstname' => "Guillaume",
             'lastname' => "Braconnier",
             'phone' => "03 20 85 18 18",
+            'specialty' => "Médecine du sport",
             'user_id' => 1,
             'office_id' => 1
         ]);
@@ -31,7 +37,8 @@ class DoctorsTableSeeder extends Seeder
             'firstname' => "Olivier",
             'lastname' => "Wauquier",
             'phone' => "03 20 47 00 57",
-            'user_id' => 1,
+            'specialty' => "Médecine du sport",
+            'user_id' => 2,
             'office_id' => 1
         ]);
 
@@ -47,16 +54,9 @@ class DoctorsTableSeeder extends Seeder
             'firstname' => "Patrick",
             'lastname' => "Rimetz",
             'phone' => "03 20 57 29 34",
-            'user_id' => 2,
+            'user_id' => 1,
             'office_id' => 1
         ]);
 
-        DB::table('doctors')->insert([
-            'firstname' => "Corinne",
-            'lastname' => "Auslender",
-            'phone' => "03 20 74 97 87",
-            'user_id' => 2,
-            'office_id' => 2
-        ]);
     }
 }

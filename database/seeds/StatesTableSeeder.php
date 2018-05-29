@@ -11,6 +11,9 @@ class StatesTableSeeder extends Seeder
      */
     public function run()
     {
+
+        // 1 = cloturé, 2 = saisie en cours, 3 = remboursé, 4 = validée mise en paiement
+
         DB::table('states')->insert([
             'name' => 'CL',
             'display_name' => 'Sasie clôturée',

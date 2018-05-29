@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DoctorsTableSeeder::class);
         $this->call(VisitsTableSeeder::class);
         $this->call(ExpenseSheetsTableSeeder::class);
+        $this->call(FixedExpenseRowsTableSeeder::class);
+        $this->call(NonFixedExpenseRowsTableSeeder::class);
     }
 }

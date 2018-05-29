@@ -22,7 +22,7 @@ class ExpenseSheetController extends \App\Http\Controllers\ExpenseSheetControlle
     private function store($userId) {
 
         $visitor = User::whereId($userId)->firstOrFail();
-        $this->authorize('visitorStore', ExpenseSheet::class, $visitor);
+        //$this->authorize('visitorStore', ExpenseSheet::class, $visitor);
 
 
         $sheet = new ExpenseSheet(array(
@@ -52,7 +52,7 @@ class ExpenseSheetController extends \App\Http\Controllers\ExpenseSheetControlle
     public function edit($userId) {
 
         $visitor = User::whereId($userId)->firstOrFail();
-        $this->authorize('visitorEdit', [ExpenseSheet::class, $visitor]);
+        //$this->authorize('visitorEdit', [ExpenseSheet::class, $visitor]);
 
         $sheet = ExpenseSheet::where('user_id', $userId)->latest()->first();
 
