@@ -14,6 +14,7 @@ class NonFixedExpenseRowsTableSeeder extends Seeder
         DB::table('non_fixed_expense_rows')->insert([
             'wording' => "Parking",
             'amount' => 13.63,
+            'refused' => true,
             'expense_date' => Carbon\Carbon::createFromDate(2018, 3, 20),
             'expense_sheet_id' => 1
         ]);
